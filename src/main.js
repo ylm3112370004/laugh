@@ -1,7 +1,7 @@
 // require('./style.scss');
-const { Player } = require('./player/index')
+import Player from './player/index'
 const music = document.querySelector('#music')
 
-Player.init(music);
-
-document.querySelector('.loading').classList.add('hide')
+Player.init(music, () => {
+  document.body.removeChild(document.querySelector('.move-to-play'))
+});

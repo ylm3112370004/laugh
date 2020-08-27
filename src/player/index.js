@@ -4,22 +4,23 @@ const Player = {
   id: undefined,
   time: 0,
   n: 0,
+  music: null,
+  callback: null,
   ui: {
     terminal: document.querySelector('#terminal'),
     styleDiv: document.querySelector('#demo2')
   },
-  init: (music) => {
+  init: (music, callback) => {
     Player.music = music
+    Player.callback = callback
     Player.ui.terminal.innerText = styleText.substring(0, Player.n)
     Player.ui.styleDiv.innerHTML = styleText.substring(0, Player.n)
-    Player.play()
     Player.bind()
   },
   events: {
     '#btnPause': 'pause',
     '#btnPlay': 'play',
     '#btnSlow': 'slow',
-    '#btnNormal': 'normal',
     '#btnFast': 'fast',
   },
   bind: () => {
@@ -44,6 +45,10 @@ const Player = {
     if(Player.n > styleText.length) Player.n = 0; 
     if(Player.interval) return
     if(Player.music) Player.music.play()  // 适配音乐
+    if(Player.callback) {
+      Player.callback()
+      Player.callback = null
+    }
     Player.id = setInterval(Player.run, Player.time)
     Player.interval = true;
   },
@@ -57,12 +62,7 @@ const Player = {
   },
   slow: () => {
     Player.pause()
-    Player.time = 200
-    Player.play()
-  },
-  normal: () => {
-    Player.pause()
-    Player.time = 50
+    Player.time = 100
     Player.play()
   },
   fast: () => {

@@ -1,7 +1,7 @@
 # laugh
 开心一下吧
 
-## 技术及概念：
+## 技术及概念
 - 使用parcel打包
 - 模块化 
 - 对象封装
@@ -26,6 +26,9 @@
   }
 }
 ```
+
+## 使用scss 需要安装插件
+`npm install -D sass`
 
 # 项目结构
 
@@ -76,8 +79,3 @@ play = () => {
 ```javascript
 interval = false;
 ```
-
-# 使用scss 需要安装插件
-`npm install -D sass`
-
-

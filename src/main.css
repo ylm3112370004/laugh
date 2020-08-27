@@ -25,6 +25,12 @@ header .title {
   color: #fff;
   font-size: 24px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+header .title img {
+  height: 40px;
 }
 
 button {
@@ -99,4 +105,50 @@ button > .description {
 
 #html .loading.hide {
   opacity: 0;
+}
+
+.move-to-play {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  height: 10%;
+  animation: move 4s infinite forwards linear;
+}
+@keyframes move{
+  50% {
+    top:30px;
+    right: 220px;
+    transform: translate(50%, -20%);
+  }
+  50%, 70%, 90% {
+    top:30px;
+    right: 220px;
+    transform: translate(50%, -20%) scale(1);
+  }
+  60%, 80%, 100% {
+    top:30px;
+    right: 220px;
+    transform: translate(50%, -20%) scale(.5);
+  }
+}
+
+@media (max-width: 736px) {
+  @keyframes move{
+    50% {
+      top:30px;
+      right: 130px;
+      transform: translate(50%, -20%);
+    }
+    50%, 70%, 90% {
+      top:30px;
+      right: 130px;
+      transform: translate(50%, -20%) scale(1);
+    }
+    60%, 80%, 100% {
+      top:30px;
+      right: 130px;
+      transform: translate(50%, -20%) scale(.5);
+    }
+  }
 }

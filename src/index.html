@@ -13,7 +13,7 @@
 <body>
   <header>
     <style id="demo2"></style>
-    <div class="title">宝宝乐吧</div>
+    <div class="title"><img src="./static/svg/baby.svg"/>宝宝乐吧</div>
     <div id="buttons">
       <button id="btnPause">
         <img src="./static/svg/pause.svg" />
@@ -25,18 +25,16 @@
       </button>
       <button id="btnSlow">
         <img src="./static/svg/fast-backward.svg" />
-        <span class="description">慢速</span></button>
-      <button id="btnNormal">
-        <img src="./static/svg/play.svg" />
-        <span class="description">中速</span></button>
+        <span class="description">慢速</span>
+      </button>
       <button id="btnFast">
         <img src="./static/svg/fast-backward.svg" />
-        <span class="description">快速</span></button>
+        <span class="description">快速</span>
+      </button>
     </div>
   </header>
   <div id="terminal"></div>
   <div id="html">
-    <div class="loading">动画马上开始......</div>
     <div class="skin">
       <div class="heart heart--1"></div>
       <div class="heart heart--2"></div>
@@ -65,7 +63,8 @@
       </div>
     </div>
   </div>
-  <audio id="music" src="./static/EasyBreeze.mp3" controls preload="auto" hidden autoplay></audio>
+  <audio id="music" src="./static/EasyBreeze.mp3"preload="auto" hidden></audio>
+  <img class="move-to-play" src="./static/svg/hand.svg"/>
   <script src="main.js"></script>
 </body>
 
