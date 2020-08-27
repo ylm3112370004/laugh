@@ -1,0 +1,25 @@
+{
+  "name": "laugh",
+  "version": "1.0.0",
+  "description": "开心一下吧",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "rm -rf dist parcel build src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylm3112370004/laugh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ylm3112370004/laugh/issues"
+  },
+  "homepage": "https://github.com/ylm3112370004/laugh#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  }
+}
