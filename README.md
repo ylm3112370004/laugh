@@ -1,10 +1,10 @@
-# laugh
-开心一下吧
+# 毛毛乐吧
+
+基于 parcel / SCSS / ES6 / LocalStorage
 
 ## 技术及概念
 - 使用parcel打包
 - 模块化 
-- 对象封装
 - 表驱动编程
 
 # 使用parcel打包
@@ -30,13 +30,6 @@
 ## 使用scss 需要安装插件
 `npm install -D sass`
 
-# 项目结构
-
-index.html
-main.scss
-style.scss
-main.js
-
 ## 优化代码
 
 ### 表驱动编程
@@ -53,7 +46,6 @@ const events = {
   '#btnPause': 'pause',
   '#btnPlay': 'play',
   '#btnSlow': 'slow',
-  '#btnNormal': 'normal',
   '#btnFast': 'fast',
 }
 for(let key in events) {
@@ -79,3 +71,5 @@ play = () => {
 ```javascript
 interval = false;
 ```
+
+## 有待解决的事情 audio 太大怎么办
