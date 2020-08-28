@@ -42,7 +42,7 @@ const Player = {
   },
   play: () => {
     if(Player.n > styleText.length) Player.n = 0; 
-    if(Player.id < 0) return  // 这里不能使用ID做守卫，因为ID一直存在
+    if(Player.id < 0) return 
     if(Player.music) Player.music.play()  // 适配音乐
     if(Player.callback) {
       Player.callback()
